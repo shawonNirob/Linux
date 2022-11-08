@@ -1,0 +1,719 @@
+//pwd, cd,ls
+shawon@shawon-Inspiron-5570:~$ pwd
+/home/shawon
+shawon@shawon-Inspiron-5570:~$ cd /
+shawon@shawon-Inspiron-5570:/$ ls
+bin  boot  cdrom  dev  etc  home  lib  lib32  lib64  libx32  lost+found  media  mnt  opt  proc  root  run  sbin  snap  srv  swapfile  sys  tmp  usr  var
+shawon@shawon-Inspiron-5570:/$ cd home/
+shawon@shawon-Inspiron-5570:/home$ ls
+shawon
+shawon@shawon-Inspiron-5570:/home$ cd /shawon
+bash: cd: /shawon: No such file or directory
+shawon@shawon-Inspiron-5570:/home$ cd shawon/
+shawon@shawon-Inspiron-5570:~$ ls
+big.txt  Desktop  Documents  Downloads  git_workspace  git_Workspace  IdeaProjects  MSE  Music  out.txt  Pictures  Public  snap  Templates  Videos
+shawon@shawon-Inspiron-5570:~$ cd Pictures/
+shawon@shawon-Inspiron-5570:~/Pictures$ ls
+1666927139583.jpeg  Black-Ubuntu-20-04-Default-Wallpaper.png  Screenshots                       Wallpapers
+2587686.jpg         Focal-Fossa_WP_1920x1080.jpg              wallpaperflare.com_wallpaper.jpg  wp4898253-kali-linux-desktop-wallpapers.jpg
+shawon@shawon-Inspiron-5570:~/Pictures$ cd Wallpapers/
+shawon@shawon-Inspiron-5570:~/Pictures/Wallpapers$ cd ..
+shawon@shawon-Inspiron-5570:~/Pictures$ ls
+1666927139583.jpeg  Black-Ubuntu-20-04-Default-Wallpaper.png  Screenshots                       Wallpapers
+2587686.jpg         Focal-Fossa_WP_1920x1080.jpg              wallpaperflare.com_wallpaper.jpg  wp4898253-kali-linux-desktop-wallpapers.jpg
+shawon@shawon-Inspiron-5570:~/Pictures$ ls ..
+big.txt  Desktop  Documents  Downloads  git_workspace  git_Workspace  IdeaProjects  MSE  Music  out.txt  Pictures  Public  snap  Templates  Videos
+shawon@shawon-Inspiron-5570:~/Pictures$ ls ../..
+shawon
+shawon@shawon-Inspiron-5570:~/Pictures$ cd ~
+shawon@shawon-Inspiron-5570:~$ pwd
+/home/shawon
+shawon@shawon-Inspiron-5570:~$ cd /
+shawon@shawon-Inspiron-5570:/$
+
+//cat
+shawon@shawon-Inspiron-5570:~$ cat
+Hello world
+Hello world
+echo input
+echo input
+shawon@shawon-Inspiron-5570:~$ ls
+big.txt    Downloads      IdeaProjects  out.txt   snap
+Desktop    git_workspace  MSE           Pictures  Templates
+Documents  git_Workspace  Music         Public    Videos
+shawon@shawon-Inspiron-5570:~$ cat out.txt
+list 1 line 1
+list 1 line 2
+
+list 1 line 3
+shawon@shawon-Inspiron-5570:~$ cat out.txt big.txt
+list 1 line 1
+list 1 line 2
+
+list 1 line 3
+Desktop
+Documents
+Downloads
+git_workspace
+git_Workspace
+IdeaProjects
+MSE
+Music
+Pictures
+Public
+snap
+Templates
+Videos
+out.txt
+big.txt
+shawon@shawon-Inspiron-5570:~$ 
+
+//cat
+shawon@shawon-Inspiron-5570:~$ ls
+big.txt  Desktop  Documents  Downloads  git_workspace  git_Workspace  IdeaProjects  MSE  Music  out.txt  Pictures  Public  snap  Templates  Videos
+shawon@shawon-Inspiron-5570:~$ cat out.txt
+list 1 line 1
+
+list 1 line 2
+
+list 1 line 3
+list 1 line 4
+shawon@shawon-Inspiron-5570:~$ cat -b  out.txt
+     1	list 1 line 1
+
+     2	list 1 line 2
+
+     3	list 1 line 3
+     4	list 1 line 4
+shawon@shawon-Inspiron-5570:~$ cat -n  out.txt
+     1	list 1 line 1
+     2	
+     3	list 1 line 2
+     4	
+     5	list 1 line 3
+     6	list 1 line 4
+shawon@shawon-Inspiron-5570:~$ cat -s  out.txt
+list 1 line 1
+
+list 1 line 2
+
+list 1 line 3
+list 1 line 4
+shawon@shawon-Inspiron-5570:~$ cat -E  out.txt
+list 1 line 1$
+$
+list 1 line 2$
+$
+$
+list 1 line 3$
+list 1 line 4$
+shawon@shawon-Inspiron-5570:~$ 
+
+
+//cat
+shawon@shawon-Inspiron-5570:~/Code$ cat test1.txt
+list 1 line 1
+list 1 line 2
+list 1 line 3
+list 1 line 4
+
+shawon@shawon-Inspiron-5570:~/Code$ cat test2.txt
+list 2 line 1
+list 2 line 2
+list 2 line 3
+list 2 line 4
+shawon@shawon-Inspiron-5570:~/Code$ cat test1.txt test2.txt > out.txt
+shawon@shawon-Inspiron-5570:~/Code$ cat out.txt
+list 1 line 1
+list 1 line 2
+list 1 line 3
+list 1 line 4
+
+list 2 line 1
+list 2 line 2
+list 2 line 3
+list 2 line 4
+
+shawon@shawon-Inspiron-5570:~/Code$ cat test1.txt >> test2.txt
+shawon@shawon-Inspiron-5570:~/Code$ cat test2.txt
+list 2 line 1
+list 2 line 2
+list 2 line 3
+list 2 line 4
+list 1 line 1
+list 1 line 2
+list 1 line 3
+list 1 line 4
+
+shawon@shawon-Inspiron-5570:~/Code$ ls
+out.txt  test1.txt  test2.txt  test2.txt2  test.txt2
+shawon@shawon-Inspiron-5570:~/Code$ cat out.txt
+list 1 line 1
+list 1 line 2
+list 1 line 3
+list 1 line 4
+
+list 2 line 1
+list 2 line 2
+list 2 line 3
+list 2 line 4
+shawon@shawon-Inspiron-5570:~/Code$ ls -al > out.txt
+shawon@shawon-Inspiron-5570:~/Code$ cat out.txt
+total 24
+drwxrwxr-x  2 shawon shawon 4096 Oct 31 14:08 .
+drwxr-x--- 26 shawon shawon 4096 Oct 31 13:58 ..
+-rw-rw-r--  1 shawon shawon    0 Nov  1 01:26 out.txt
+-rw-rw-r--  1 shawon shawon   57 Oct 31 13:58 test1.txt
+-rw-rw-r--  1 shawon shawon  113 Oct 31 14:09 test2.txt
+-rw-rw-r--  1 shawon shawon   57 Oct 31 14:08 test2.txt2
+-rw-rw-r--  1 shawon shawon   57 Oct 31 14:07 test.txt2
+shawon@shawon-Inspiron-5570:~/Code$ 
+
+//rm and rmdir
+shawon@shawon-Inspiron-5570:~/Code$ pwd
+/home/shawon/Code
+shawon@shawon-Inspiron-5570:~/Code$ cd names/
+shawon@shawon-Inspiron-5570:~/Code/names$ rmdir math
+shawon@shawon-Inspiron-5570:~/Code/names$ mkdir -p a/b/c/d/e
+shawon@shawon-Inspiron-5570:~/Code/names$ ls -R
+.:
+a  code  music
+
+./a:
+b
+
+./a/b:
+c
+
+./a/b/c:
+d
+
+./a/b/c/d:
+e
+
+./a/b/c/d/e:
+
+./code:
+
+./music:
+shawon@shawon-Inspiron-5570:~/Code/names$ rmdir a/b/c/d/e
+shawon@shawon-Inspiron-5570:~/Code/names$ ls -R
+.:
+a  code  music
+
+./a:
+b
+
+./a/b:
+c
+
+./a/b/c:
+d
+
+./a/b/c/d:
+
+./code:
+
+./music:
+shawon@shawon-Inspiron-5570:~/Code/names$ rmdir -pv a/b/c/d
+rmdir: removing directory, 'a/b/c/d'
+rmdir: removing directory, 'a/b/c'
+rmdir: removing directory, 'a/b'
+rmdir: removing directory, 'a'
+shawon@shawon-Inspiron-5570:~/Code/names$ mkdir -p a/b/c/d/e
+shawon@shawon-Inspiron-5570:~/Code/names$ cd a/b/
+shawon@shawon-Inspiron-5570:~/Code/names/a/b$ cat > abc.txt
+hey bitch!
+whats up?
+shawon@shawon-Inspiron-5570:~/Code/names/a/b$ ls
+abc.txt  c
+shawon@shawon-Inspiron-5570:~/Code/names/a/b$ ls -R
+.:
+abc.txt  c
+
+./c:
+d
+
+./c/d:
+e
+
+./c/d/e:
+shawon@shawon-Inspiron-5570:~/Code/names/a/b$ cd ..
+shawon@shawon-Inspiron-5570:~/Code/names/a$ cd ..
+shawon@shawon-Inspiron-5570:~/Code/names$ ls -R
+.:
+a  code  music
+
+./a:
+b
+
+./a/b:
+abc.txt  c
+
+./a/b/c:
+d
+
+./a/b/c/d:
+e
+
+./a/b/c/d/e:
+
+./code:
+
+./music:
+shawon@shawon-Inspiron-5570:~/Code/names$ rmdir -pv a/b/c/d/e
+rmdir: removing directory, 'a/b/c/d/e'
+rmdir: removing directory, 'a/b/c/d'
+rmdir: removing directory, 'a/b/c'
+rmdir: removing directory, 'a/b'
+rmdir: failed to remove directory 'a/b': Directory not empty
+shawon@shawon-Inspiron-5570:~/Code/names$ ls -R
+.:
+a  code  music
+
+./a:
+b
+
+./a/b:
+abc.txt
+
+./code:
+
+./music:
+shawon@shawon-Inspiron-5570:~/Code/names$ rm -rv a/b/
+removed 'a/b/abc.txt'
+removed directory 'a/b/'
+shawon@shawon-Inspiron-5570:~/Code/names$ rm -r a
+shawon@shawon-Inspiron-5570:~/Code/names$ 
+
+
+//cp
+shawon@shawon-Inspiron-5570:~$ pwd
+/home/shawon
+shawon@shawon-Inspiron-5570:~$ cd Code/
+shawon@shawon-Inspiron-5570:~/Code$ ls
+image  names  out.txt  test1.txt  test2.txt  test2.txt2  test.txt2
+shawon@shawon-Inspiron-5570:~/Code$ cp out.txt copy.txt
+shawon@shawon-Inspiron-5570:~/Code$ cat out.txt
+total 24
+drwxrwxr-x  2 shawon shawon 4096 Oct 31 14:08 .
+drwxr-x--- 26 shawon shawon 4096 Oct 31 13:58 ..
+-rw-rw-r--  1 shawon shawon    0 Nov  1 01:26 out.txt
+-rw-rw-r--  1 shawon shawon   57 Oct 31 13:58 test1.txt
+-rw-rw-r--  1 shawon shawon  113 Oct 31 14:09 test2.txt
+-rw-rw-r--  1 shawon shawon   57 Oct 31 14:08 test2.txt2
+-rw-rw-r--  1 shawon shawon   57 Oct 31 14:07 test.txt2
+shawon@shawon-Inspiron-5570:~/Code$ cat copy.txt
+total 24
+drwxrwxr-x  2 shawon shawon 4096 Oct 31 14:08 .
+drwxr-x--- 26 shawon shawon 4096 Oct 31 13:58 ..
+-rw-rw-r--  1 shawon shawon    0 Nov  1 01:26 out.txt
+-rw-rw-r--  1 shawon shawon   57 Oct 31 13:58 test1.txt
+-rw-rw-r--  1 shawon shawon  113 Oct 31 14:09 test2.txt
+-rw-rw-r--  1 shawon shawon   57 Oct 31 14:08 test2.txt2
+-rw-rw-r--  1 shawon shawon   57 Oct 31 14:07 test.txt2
+shawon@shawon-Inspiron-5570:~/Code$ mkdir dir1
+shawon@shawon-Inspiron-5570:~/Code$ ls dir1/
+shawon@shawon-Inspiron-5570:~/Code$ cp file1.txt dir1
+cp: cannot stat 'file1.txt': No such file or directory
+shawon@shawon-Inspiron-5570:~/Code$ cp copy1.txt dir1
+cp: cannot stat 'copy1.txt': No such file or directory
+shawon@shawon-Inspiron-5570:~/Code$ cp copy.txt dir1
+shawon@shawon-Inspiron-5570:~/Code$ ls dir1/
+copy.txt
+shawon@shawon-Inspiron-5570:~/Code$ cp test1.txt test2.txt dir1
+shawon@shawon-Inspiron-5570:~/Code$ ls dir1/
+copy.txt  test1.txt  test2.txt
+shawon@shawon-Inspiron-5570:~/Code$ 
+shawon@shawon-Inspiron-5570:~/Code$ cp -i test1.txt test2.txt dir1
+cp: overwrite 'dir1/test1.txt'? y
+cp: overwrite 'dir1/test2.txt'? n
+shawon@shawon-Inspiron-5570:~/Code$ cd dir1/
+shawon@shawon-Inspiron-5570:~/Code/dir1$ ls
+copy.txt  test1.txt  test2.txt
+shawon@shawon-Inspiron-5570:~/Code/dir1$ cd ..
+shawon@shawon-Inspiron-5570:~/Code$ mkdir dir2
+shawon@shawon-Inspiron-5570:~/Code$ cp -R dir1 dir2
+shawon@shawon-Inspiron-5570:~/Code$ cd dir2
+shawon@shawon-Inspiron-5570:~/Code/dir2$ ls
+dir1
+shawon@shawon-Inspiron-5570:~/Code/dir2$ ls
+dir1
+shawon@shawon-Inspiron-5570:~/Code/dir2$ ls ..
+copy.txt  dir2   names    test1.txt  test2.txt2
+dir1      image  out.txt  test2.txt  test.txt2
+shawon@shawon-Inspiron-5570:~/Code/dir2$ cd dir1
+shawon@shawon-Inspiron-5570:~/Code/dir2/dir1$ ls
+copy.txt  test1.txt  test2.txt
+shawon@shawon-Inspiron-5570:~/Code/dir2/dir1$ cd ..
+shawon@shawon-Inspiron-5570:~/Code/dir2$ cd ..
+shawon@shawon-Inspiron-5570:~/Code$ cp -cR dir1 dir2
+cp: invalid option -- 'c'
+Try 'cp --help' for more information.
+shawon@shawon-Inspiron-5570:~/Code$ cp -vR dir1 dir2
+'dir1/copy.txt' -> 'dir2/dir1/copy.txt'
+'dir1/test1.txt' -> 'dir2/dir1/test1.txt'
+'dir1/test2.txt' -> 'dir2/dir1/test2.txt'
+shawon@shawon-Inspiron-5570:~/Code$ cd dir2
+shawon@shawon-Inspiron-5570:~/Code/dir2$ ls
+dir1
+shawon@shawon-Inspiron-5570:~/Code/dir2$ 
+
+
+//mv
+shawon@shawon-Inspiron-5570:~$ pwd
+/home/shawon
+shawon@shawon-Inspiron-5570:~$ ls
+big.txt  Documents      git_Workspace  Music     Public     test.txt
+Code     Downloads      IdeaProjects   out.txt   snap       Videos
+Desktop  git_workspace  MSE            Pictures  Templates
+shawon@shawon-Inspiron-5570:~$ cd Code/
+shawon@shawon-Inspiron-5570:~/Code$ ls
+copy.txt  dir2   names    test1.txt  test2.txt2
+dir1      image  out.txt  test2.txt  test.txt2
+shawon@shawon-Inspiron-5570:~/Code$ mv test2.txt test1.txt
+shawon@shawon-Inspiron-5570:~/Code$ cat test2.txt
+cat: test2.txt: No such file or directory
+shawon@shawon-Inspiron-5570:~/Code$ cat test1.txt
+list 2 line 1
+list 2 line 2
+list 2 line 3
+list 2 line 4
+list 1 line 1
+list 1 line 2
+list 1 line 3
+list 1 line 4
+
+shawon@shawon-Inspiron-5570:~/Code$ cat test1.txt
+list 2 line 1
+list 2 line 2
+list 2 line 3
+list 2 line 4
+list 1 line 1
+list 1 line 2
+list 1 line 3
+list 1 line 4
+list 3 line 5
+
+shawon@shawon-Inspiron-5570:~/Code$ cat test2.txt
+list 10 line 1
+list 10 line 2
+list 10 line 3
+list 10 line 4
+
+shawon@shawon-Inspiron-5570:~/Code$ mv test1.txt test2.txt
+shawon@shawon-Inspiron-5570:~/Code$ cat test2.txt
+list 2 line 1
+list 2 line 2
+list 2 line 3
+list 2 line 4
+list 1 line 1
+list 1 line 2
+list 1 line 3
+list 1 line 4
+list 3 line 5
+
+shawon@shawon-Inspiron-5570:~/Code$ cat test1.txt
+cat: test1.txt: No such file or directory
+shawon@shawon-Inspiron-5570:~/Code$ mv test2.txt copy.txt
+shawon@shawon-Inspiron-5570:~/Code$ catcopy.txt
+catcopy.txt: command not found
+shawon@shawon-Inspiron-5570:~/Code$ cat copy.txt
+list 2 line 1
+list 2 line 2
+list 2 line 3
+list 2 line 4
+list 1 line 1
+list 1 line 2
+list 1 line 3
+list 1 line 4
+list 3 line 5
+
+shawon@shawon-Inspiron-5570:~/Code$ ls
+copy.txt  dir1  dir2  image  names  out.txt  test.txt
+shawon@shawon-Inspiron-5570:~/Code$ mv copy.txt dir1
+shawon@shawon-Inspiron-5570:~/Code$ ls
+dir1  dir2  image  names  out.txt  test.txt
+shawon@shawon-Inspiron-5570:~/Code$ cd dir1
+shawon@shawon-Inspiron-5570:~/Code/dir1$ ls
+copy.txt  test1.txt  test2.txt
+shawon@shawon-Inspiron-5570:~/Code/dir1$ cat copy.txt
+list 2 line 1
+list 2 line 2
+list 2 line 3
+list 2 line 4
+list 1 line 1
+list 1 line 2
+list 1 line 3
+list 1 line 4
+list 3 line 5
+
+shawon@shawon-Inspiron-5570:~/Code/dir1$ ls
+copy.txt  test1.txt  test2.txt
+shawon@shawon-Inspiron-5570:~/Code/dir1$ cd ..
+shawon@shawon-Inspiron-5570:~/Code$ cat dir1/file3.txt
+cat: dir1/file3.txt: No such file or directory
+shawon@shawon-Inspiron-5570:~/Code$ mkdir file3.txt
+shawon@shawon-Inspiron-5570:~/Code$ cat dir1/file3.txt
+cat: dir1/file3.txt: No such file or directory
+shawon@shawon-Inspiron-5570:~/Code$ rmdir file3.txt
+shawon@shawon-Inspiron-5570:~/Code$ ls
+dir1  dir2  image  names  out.txt  test.txt
+shawon@shawon-Inspiron-5570:~/Code$ ls dir1/
+copy.txt  test1.txt  test2.txt
+shawon@shawon-Inspiron-5570:~/Code$ cd dir1
+shawon@shawon-Inspiron-5570:~/Code/dir1$ cd ..
+shawon@shawon-Inspiron-5570:~/Code$ cat > file3.txt
+i am nirob
+shawon@shawon-Inspiron-5570:~/Code$ cd dir1
+shawon@shawon-Inspiron-5570:~/Code/dir1$ mkdir file3.txt
+shawon@shawon-Inspiron-5570:~/Code/dir1$ cd ..
+shawon@shawon-Inspiron-5570:~/Code$ mv file3.txt dir1
+mv: cannot overwrite directory 'dir1/file3.txt' with non-directory
+shawon@shawon-Inspiron-5570:~/Code$ cd dir1
+shawon@shawon-Inspiron-5570:~/Code/dir1$ cat > file3.txt
+hello world
+shawon@shawon-Inspiron-5570:~/Code/dir1$ cd ..
+shawon@shawon-Inspiron-5570:~/Code$ mv file3.txt dir1
+shawon@shawon-Inspiron-5570:~/Code$ cat file3.txt
+cat: file3.txt: No such file or directory
+shawon@shawon-Inspiron-5570:~/Code$ cat dir1/file3.txt
+i am nirob
+shawon@shawon-Inspiron-5570:~/Code$ cat > file3.txt
+who are you?
+shawon@shawon-Inspiron-5570:~/Code$ mv -i file3.txt dir1
+mv: overwrite 'dir1/file3.txt'? y
+shawon@shawon-Inspiron-5570:~/Code$ cat file3.txt
+cat: file3.txt: No such file or directory
+shawon@shawon-Inspiron-5570:~/Code$ cat dir1/file3.txt
+who are you?
+shawon@shawon-Inspiron-5570:~/Code$ 
+
+
+
+//less
+read or pattern wise read
+
+
+//touch
+shawon@shawon-Inspiron-5570:~/Code/dir1$ ls -l
+total 16
+-rw-rw-r-- 1 shawon shawon 127 Nov  2 10:17 copy.txt
+-rw-rw-r-- 1 shawon shawon  13 Nov  2 10:58 file3.txt
+-rw-rw-r-- 1 shawon shawon  57 Nov  1 12:14 test1.txt
+-rw-rw-r-- 1 shawon shawon 113 Nov  1 12:11 test2.txt
+shawon@shawon-Inspiron-5570:~/Code/dir1$ touch file4
+shawon@shawon-Inspiron-5570:~/Code/dir1$ ls-l
+ls-l: command not found
+shawon@shawon-Inspiron-5570:~/Code/dir1$ ls -l
+total 16
+-rw-rw-r-- 1 shawon shawon 127 Nov  2 10:17 copy.txt
+-rw-rw-r-- 1 shawon shawon  13 Nov  2 10:58 file3.txt
+-rw-rw-r-- 1 shawon shawon   0 Nov  2 16:02 file4
+-rw-rw-r-- 1 shawon shawon  57 Nov  1 12:14 test1.txt
+-rw-rw-r-- 1 shawon shawon 113 Nov  1 12:11 test2.txt
+shawon@shawon-Inspiron-5570:~/Code/dir1$ touch file7.txt
+shawon@shawon-Inspiron-5570:~/Code/dir1$ ls -l
+total 16
+-rw-rw-r-- 1 shawon shawon 127 Nov  2 10:17 copy.txt
+-rw-rw-r-- 1 shawon shawon  13 Nov  2 10:58 file3.txt
+-rw-rw-r-- 1 shawon shawon   0 Nov  2 16:02 file4
+-rw-rw-r-- 1 shawon shawon   0 Nov  2 16:05 file7.txt
+-rw-rw-r-- 1 shawon shawon  57 Nov  1 12:14 test1.txt
+-rw-rw-r-- 1 shawon shawon 113 Nov  1 12:11 test2.txt
+shawon@shawon-Inspiron-5570:~/Code/dir1$ touch test1.txt
+shawon@shawon-Inspiron-5570:~/Code/dir1$ ls -l
+total 16
+-rw-rw-r-- 1 shawon shawon 127 Nov  2 10:17 copy.txt
+-rw-rw-r-- 1 shawon shawon  13 Nov  2 10:58 file3.txt
+-rw-rw-r-- 1 shawon shawon   0 Nov  2 16:02 file4
+-rw-rw-r-- 1 shawon shawon   0 Nov  2 16:05 file7.txt
+-rw-rw-r-- 1 shawon shawon  57 Nov  2 16:07 test1.txt
+-rw-rw-r-- 1 shawon shawon 113 Nov  1 12:11 test2.txt
+shawon@shawon-Inspiron-5570:~/Code/dir1$ 
+
+
+//nano
+
+
+//sudo
+
+
+//echo
+shawon@shawon-Inspiron-5570:~$ man echo
+shawon@shawon-Inspiron-5570:~$ echo hell world
+hello world
+shawon@shawon-Inspiron-5570:~$ echo "Hello World"
+Hello World
+shawon@shawon-Inspiron-5570:~$ var="Mark"
+shawon@shawon-Inspiron-5570:~$ echo $var
+Mark
+shawon@shawon-Inspiron-5570:~$ x=10
+shawon@shawon-Inspiron-5570:~$ echo "the value of x is $x"
+the value of x is 10
+shawon@shawon-Inspiron-5570:~$ echo 'some \text'
+some \text
+shawon@shawon-Inspiron-5570:~$ echo -e  'some \text'
+some 	ext
+shawon@shawon-Inspiron-5570:~$ echo -e 'sone \ntext'
+sone 
+text
+shawon@shawon-Inspiron-5570:~$ echo -e 'some \ntext'
+some 
+text
+shawon@shawon-Inspiron-5570:~$ 
+
+
+//file permissions
+shawon@shawon-Inspiron-5570:~/Code/dir1$ ls -l
+total 24
+-rw-rw-r-- 1 shawon shawon 127 Nov  2 10:17 copy.txt
+-rw-rw-r-- 1 shawon shawon  75 Nov  2 16:45 example.cpp
+-rw-rw-r-- 1 shawon shawon  13 Nov  2 10:58 file3.txt
+-rw-rw-r-- 1 shawon shawon   0 Nov  2 16:02 file4
+-rw-rw-r-- 1 shawon shawon   0 Nov  2 16:05 file7.txt
+-rw-rw-r-- 1 shawon shawon  16 Nov  2 16:42 file8.txt
+-rw-rw-r-- 1 shawon shawon  57 Nov  2 16:07 test1.txt
+-rw-rw-r-- 1 shawon shawon 113 Nov  1 12:11 test2.txt
+shawon@shawon-Inspiron-5570:~/Code/dir1$ ls -l
+total 24
+-rw-rw-r-- 1 shawon shawon 127 Nov  2 10:17 copy.txt
+-rw-rw-r-- 1 shawon shawon  75 Nov  2 16:45 example.cpp
+-rw-rw-r-- 1 shawon shawon  13 Nov  2 10:58 file3.txt
+-rw-rw-r-- 1 shawon shawon   0 Nov  2 16:02 file4
+-rw-rw-r-- 1 shawon shawon   0 Nov  2 16:05 file7.txt
+-rw-rw-r-- 1 shawon shawon  16 Nov  2 16:42 file8.txt
+-rw-rw-r-- 1 shawon shawon  57 Nov  2 16:07 test1.txt
+-rw-rw-r-- 1 shawon shawon 113 Nov  1 12:11 test2.txt
+shawon@shawon-Inspiron-5570:~/Code/dir1$ chmod o+x file 
+chmod: cannot access 'file': No such file or directory
+shawon@shawon-Inspiron-5570:~/Code/dir1$ chmod o+x file4 
+shawon@shawon-Inspiron-5570:~/Code/dir1$ ls -l
+total 24
+-rw-rw-r-- 1 shawon shawon 127 Nov  2 10:17 copy.txt
+-rw-rw-r-- 1 shawon shawon  75 Nov  2 16:45 example.cpp
+-rw-rw-r-- 1 shawon shawon  13 Nov  2 10:58 file3.txt
+-rw-rw-r-x 1 shawon shawon   0 Nov  2 16:02 file4
+-rw-rw-r-- 1 shawon shawon   0 Nov  2 16:05 file7.txt
+-rw-rw-r-- 1 shawon shawon  16 Nov  2 16:42 file8.txt
+-rw-rw-r-- 1 shawon shawon  57 Nov  2 16:07 test1.txt
+-rw-rw-r-- 1 shawon shawon 113 Nov  1 12:11 test2.txt
+shawon@shawon-Inspiron-5570:~/Code/dir1$ chmod o+w file4 
+shawon@shawon-Inspiron-5570:~/Code/dir1$ ls -l
+total 24
+-rw-rw-r-- 1 shawon shawon 127 Nov  2 10:17 copy.txt
+-rw-rw-r-- 1 shawon shawon  75 Nov  2 16:45 example.cpp
+-rw-rw-r-- 1 shawon shawon  13 Nov  2 10:58 file3.txt
+-rw-rw-rwx 1 shawon shawon   0 Nov  2 16:02 file4
+-rw-rw-r-- 1 shawon shawon   0 Nov  2 16:05 file7.txt
+-rw-rw-r-- 1 shawon shawon  16 Nov  2 16:42 file8.txt
+-rw-rw-r-- 1 shawon shawon  57 Nov  2 16:07 test1.txt
+-rw-rw-r-- 1 shawon shawon 113 Nov  1 12:11 test2.txt
+shawon@shawon-Inspiron-5570:~/Code/dir1$ chmod o-w file4 
+shawon@shawon-Inspiron-5570:~/Code/dir1$ ls -l
+total 24
+-rw-rw-r-- 1 shawon shawon 127 Nov  2 10:17 copy.txt
+-rw-rw-r-- 1 shawon shawon  75 Nov  2 16:45 example.cpp
+-rw-rw-r-- 1 shawon shawon  13 Nov  2 10:58 file3.txt
+-rw-rw-r-x 1 shawon shawon   0 Nov  2 16:02 file4
+-rw-rw-r-- 1 shawon shawon   0 Nov  2 16:05 file7.txt
+-rw-rw-r-- 1 shawon shawon  16 Nov  2 16:42 file8.txt
+-rw-rw-r-- 1 shawon shawon  57 Nov  2 16:07 test1.txt
+-rw-rw-r-- 1 shawon shawon 113 Nov  1 12:11 test2.txt
+shawon@shawon-Inspiron-5570:~/Code/dir1$ chmod g+w file4 
+shawon@shawon-Inspiron-5570:~/Code/dir1$ ls -l
+total 24
+-rw-rw-r-- 1 shawon shawon 127 Nov  2 10:17 copy.txt
+-rw-rw-r-- 1 shawon shawon  75 Nov  2 16:45 example.cpp
+-rw-rw-r-- 1 shawon shawon  13 Nov  2 10:58 file3.txt
+-rw-rw-r-x 1 shawon shawon   0 Nov  2 16:02 file4
+-rw-rw-r-- 1 shawon shawon   0 Nov  2 16:05 file7.txt
+-rw-rw-r-- 1 shawon shawon  16 Nov  2 16:42 file8.txt
+-rw-rw-r-- 1 shawon shawon  57 Nov  2 16:07 test1.txt
+-rw-rw-r-- 1 shawon shawon 113 Nov  1 12:11 test2.txt
+shawon@shawon-Inspiron-5570:~/Code/dir1$ chmod g-wx file4 
+shawon@shawon-Inspiron-5570:~/Code/dir1$ ls -l
+total 24
+-rw-rw-r-- 1 shawon shawon 127 Nov  2 10:17 copy.txt
+-rw-rw-r-- 1 shawon shawon  75 Nov  2 16:45 example.cpp
+-rw-rw-r-- 1 shawon shawon  13 Nov  2 10:58 file3.txt
+-rw-r--r-x 1 shawon shawon   0 Nov  2 16:02 file4
+-rw-rw-r-- 1 shawon shawon   0 Nov  2 16:05 file7.txt
+-rw-rw-r-- 1 shawon shawon  16 Nov  2 16:42 file8.txt
+-rw-rw-r-- 1 shawon shawon  57 Nov  2 16:07 test1.txt
+-rw-rw-r-- 1 shawon shawon 113 Nov  1 12:11 test2.txt
+shawon@shawon-Inspiron-5570:~/Code/dir1$ chmod g-wx file4 
+shawon@shawon-Inspiron-5570:~/Code/dir1$ ls -l
+total 24
+-rw-rw-r-- 1 shawon shawon 127 Nov  2 10:17 copy.txt
+-rw-rw-r-- 1 shawon shawon  75 Nov  2 16:45 example.cpp
+-rw-rw-r-- 1 shawon shawon  13 Nov  2 10:58 file3.txt
+-rw-r--r-x 1 shawon shawon   0 Nov  2 16:02 file4
+-rw-rw-r-- 1 shawon shawon   0 Nov  2 16:05 file7.txt
+-rw-rw-r-- 1 shawon shawon  16 Nov  2 16:42 file8.txt
+-rw-rw-r-- 1 shawon shawon  57 Nov  2 16:07 test1.txt
+-rw-rw-r-- 1 shawon shawon 113 Nov  1 12:11 test2.txt
+shawon@shawon-Inspiron-5570:~/Code/dir1$ chmod ugo-rwx file4 
+shawon@shawon-Inspiron-5570:~/Code/dir1$ ls -l
+total 24
+-rw-rw-r-- 1 shawon shawon 127 Nov  2 10:17 copy.txt
+-rw-rw-r-- 1 shawon shawon  75 Nov  2 16:45 example.cpp
+-rw-rw-r-- 1 shawon shawon  13 Nov  2 10:58 file3.txt
+---------- 1 shawon shawon   0 Nov  2 16:02 file4
+-rw-rw-r-- 1 shawon shawon   0 Nov  2 16:05 file7.txt
+-rw-rw-r-- 1 shawon shawon  16 Nov  2 16:42 file8.txt
+-rw-rw-r-- 1 shawon shawon  57 Nov  2 16:07 test1.txt
+-rw-rw-r-- 1 shawon shawon 113 Nov  1 12:11 test2.txt
+shawon@shawon-Inspiron-5570:~/Code/dir1$ chmod ug=rwx file4 
+shawon@shawon-Inspiron-5570:~/Code/dir1$ ls -l
+total 24
+-rw-rw-r-- 1 shawon shawon 127 Nov  2 10:17 copy.txt
+-rw-rw-r-- 1 shawon shawon  75 Nov  2 16:45 example.cpp
+-rw-rw-r-- 1 shawon shawon  13 Nov  2 10:58 file3.txt
+-rwxrwx--- 1 shawon shawon   0 Nov  2 16:02 file4
+-rw-rw-r-- 1 shawon shawon   0 Nov  2 16:05 file7.txt
+-rw-rw-r-- 1 shawon shawon  16 Nov  2 16:42 file8.txt
+-rw-rw-r-- 1 shawon shawon  57 Nov  2 16:07 test1.txt
+-rw-rw-r-- 1 shawon shawon 113 Nov  1 12:11 test2.txt
+shawon@shawon-Inspiron-5570:~/Code/dir1$ chmod ugo-rwx file4 
+shawon@shawon-Inspiron-5570:~/Code/dir1$ ls -l
+total 24
+-rw-rw-r-- 1 shawon shawon 127 Nov  2 10:17 copy.txt
+-rw-rw-r-- 1 shawon shawon  75 Nov  2 16:45 example.cpp
+-rw-rw-r-- 1 shawon shawon  13 Nov  2 10:58 file3.txt
+---------- 1 shawon shawon   0 Nov  2 16:02 file4
+-rw-rw-r-- 1 shawon shawon   0 Nov  2 16:05 file7.txt
+-rw-rw-r-- 1 shawon shawon  16 Nov  2 16:42 file8.txt
+-rw-rw-r-- 1 shawon shawon  57 Nov  2 16:07 test1.txt
+-rw-rw-r-- 1 shawon shawon 113 Nov  1 12:11 test2.txt
+shawon@shawon-Inspiron-5570:~/Code/dir1$ chmod u+rw, g=rw, o+r file4
+chmod: invalid mode: ‘u+rw,’
+Try 'chmod --help' for more information.
+shawon@shawon-Inspiron-5570:~/Code/dir1$ chmod u+rw,g=rw,o+r file4
+shawon@shawon-Inspiron-5570:~/Code/dir1$ ls -l
+total 24
+-rw-rw-r-- 1 shawon shawon 127 Nov  2 10:17 copy.txt
+-rw-rw-r-- 1 shawon shawon  75 Nov  2 16:45 example.cpp
+-rw-rw-r-- 1 shawon shawon  13 Nov  2 10:58 file3.txt
+-rw-rw-r-- 1 shawon shawon   0 Nov  2 16:02 file4
+-rw-rw-r-- 1 shawon shawon   0 Nov  2 16:05 file7.txt
+-rw-rw-r-- 1 shawon shawon  16 Nov  2 16:42 file8.txt
+-rw-rw-r-- 1 shawon shawon  57 Nov  2 16:07 test1.txt
+-rw-rw-r-- 1 shawon shawon 113 Nov  1 12:11 test2.txt
+shawon@shawon-Inspiron-5570:~/Code/dir1$ 
+
+
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
